@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main"
+            stylesheets="@css/main.css" xmlns="http://javafx.com/javafx/8.0.111"
+            fx:controller="ma.ychakir.rz.packmanager.Controllers.Controller">
+    <children>
+        <JFXToolbar fx:id="toolBar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="35.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox prefHeight="35.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0"
+                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <JFXButton fx:id="btnImport" onAction="#showImport" prefHeight="35.0" text="Import"/>
+                                <JFXButton fx:id="btnSave" onAction="#save" prefHeight="35.0" text="Save"/>
+                                <JFXButton fx:id="btnRemove" onAction="#remove" prefHeight="35.0" text="Remove"/>
+                                <JFXButton fx:id="btnAbout" onAction="#about" prefHeight="35.0" text="About"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <TableView fx:id="tableView" editable="true" prefHeight="200.0" prefWidth="200.0"
+                           BorderPane.alignment="CENTER">
+                </TableView>
+            </center>
+            <bottom>
+                <AnchorPane prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXProgressBar fx:id="pb" prefWidth="600.0" progress="0.0" AnchorPane.leftAnchor="0.0"
+                                        AnchorPane.rightAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </bottom>
+        </JFXToolbar>
+        <StackPane fx:id="stackPane" prefHeight="150.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXDialogLayout fx:id="dialogLayout" visible="false"/>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
