@@ -249,21 +249,6 @@ public class Controller implements Initializable {
     }
 
     public void about() {
-//        DataUtil dataUtil = new DataUtil("C:\\Games\\test");
-//        File file = new File("C:\\Games\\ResourceDec");
-//        try {
-//            for (String s : file.list())
-//                dataUtil.addFile(file.getAbsolutePath().concat("\\").concat(s), "C:\\Games\\test");
-//            dataUtil.save("C:\\Games\\test");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            System.out.println(dataUtil.getCRC32("db_item.rdb"));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
         JFXSnackbar snackbar = new JFXSnackbar(anchor);
         snackbar.show("Pack Manager For vLauncher, Coded by Volon.", "Github", 6000, e -> {
             try {
